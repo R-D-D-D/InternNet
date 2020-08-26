@@ -6,7 +6,7 @@
       absolute
     )
       a.pl-4
-        img#logo(:src="require('./assets/Logo.png')")
+        img#logo(:src="require('@/assets/Logo.png')")
 
       v-spacer
 
@@ -22,7 +22,7 @@
       v-container.mt-8
         v-row.justify-center.mt-16
           v-col(cols="8")
-            v-img.mx-auto(:src="require('./assets/Logo_black.png')" width="80%")
+            v-img.mx-auto(:src="require('@/assets/Logo_black.png')" width="80%")
 
         v-row.justify-center.mt-8
           v-col.text-center(cols="12")
@@ -33,7 +33,7 @@
             .wrapper
               v-row
                 v-col(cols="12")
-                  v-img.mx-auto.mt-10(:src="require('./assets/search.svg')" height="160" width="160")
+                  v-img.mx-auto.mt-10(:src="require('@/assets/search.svg')" height="160" width="160")
                 v-col.text-center(cols="12")
                   strong(style="font-size:1.6rem;") Search
                 v-col.text-center(cols="12")
@@ -42,7 +42,7 @@
             .wrapper
               v-row
                 v-col(cols="12")
-                  v-img.mt-10.mx-auto(:src="require('./assets/apply.svg')" height="160" width="160")
+                  v-img.mt-10.mx-auto(:src="require('@/assets/apply.svg')" height="160" width="160")
                 v-col.text-center(cols="12")
                   strong(style="font-size:1.6rem;") Apply
                 v-col.text-center(cols="12")
@@ -51,7 +51,7 @@
             .wrapper
               v-row
                 v-col(cols="12")
-                  v-img.mt-10.mx-auto(:src="require('./assets/plan.svg')" height="160" width="160")
+                  v-img.mt-10.mx-auto(:src="require('@/assets/plan.svg')" height="160" width="160")
                 v-col.text-center(cols="12")
                   strong(style="font-size:1.6rem;") Manage
                 v-col.text-center(cols="12")
