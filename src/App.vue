@@ -1,12 +1,30 @@
 <template lang="pug">
   v-app#app
-    v-sheet(style="height:100%;")
-      v-container
+    v-app-bar#nav(
+      light
+      app
+      absolute
+    )
+      a.pl-4
+        img#logo(:src="require('./assets/Logo.png')")
+
+      v-spacer
+
+      v-toolbar-items
+        v-btn(icon)
+          v-icon mdi-google
+        v-btn(icon)
+          v-icon mdi-facebook
+        v-btn(icon)
+          v-icon mdi-linkedin
+
+    div.bg
+      v-container.mt-8
         v-row.justify-center.mt-16
           v-col(cols="8")
-            v-img.mx-auto(:src="require('./assets/Logo.png')" width="80%")
+            v-img.mx-auto(:src="require('./assets/Logo_black.png')" width="80%")
 
-        v-row.justify-center.mt-16
+        v-row.justify-center.mt-8
           v-col.text-center(cols="12")
             strong(style="font-size:1.6rem;") Experience a hassle free application process with InternNet
 
@@ -62,7 +80,7 @@ export default {
 </script>
 
 <style>
-.v-sheet {
+.bg {
   background: url('~@/assets/pattern.svg') #f8f8f8;
 }
 
@@ -85,6 +103,15 @@ export default {
 .wrapper {
   transition: all .3s cubic-bezier(.77,0,.175,1);
   border: 1px solid #d9e1e6;
+  background-color: #fff;
+}
+
+#logo {
+  height:36px;
+  width:auto;
+}
+
+#nav {
   background-color: #fff;
 }
 </style>
