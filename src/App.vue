@@ -58,8 +58,9 @@
                   div.px-8(style="font-size:1rem; color:#777;") Mange your many applications with easy to use interface and flexible way of storing information.
       
         v-row.mt-4.justify-center
-          v-col(cols="12").text-center
-            v-btn(color="#E82735" dark x-large) Sign up now to be the first to experience!
+          v-col(cols="8" style="display:flex;").text-center
+            v-text-field.mr-4(hide-details label="email" v-model='email' outlined color="#E82735" style="width:50% !important; background-color:#fff;")
+            v-btn(color="#E82735" dark x-large) Early Access
 
         v-row.justify-center.mt-10
           v-col(cols="12")
@@ -74,14 +75,14 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    email: ''
   }),
 };
 </script>
 
 <style>
 .bg {
-  background: url('~@/assets/pattern.svg') #f8f8f8;
+  /* background: url('~@/assets/pattern.svg') #f8f8f8; */
 }
 
 #app {
