@@ -1,60 +1,90 @@
-<template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+<template lang="pug">
+  v-app#app
+    v-sheet(style="height:100%;")
+      v-container
+        v-row.justify-center.mt-16
+          v-col(cols="8")
+            v-img.mx-auto(:src="require('./assets/Logo.png')" width="80%")
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+        v-row.justify-center.mt-16
+          v-col.text-center(cols="12")
+            strong(style="font-size:1.6rem;") Experience a hassle free application process with InternNet
 
-      <v-spacer></v-spacer>
+        v-row.justify-center
+          v-col(cols="12" md="4")
+            .wrapper
+              v-row
+                v-col(cols="12")
+                  v-img.mx-auto.mt-10(:src="require('./assets/search.svg')" height="160" width="160")
+                v-col.text-center(cols="12")
+                  strong(style="font-size:1.6rem;") Search
+                v-col.text-center(cols="12")
+                  div.px-8(style="font-size:1rem; color:#777;") Search through many internship platforms(indeed, jobstreet, linkedin) at once with InternNet.
+          v-col(cols="12" md="4")
+            .wrapper
+              v-row
+                v-col(cols="12")
+                  v-img.mt-10.mx-auto(:src="require('./assets/apply.svg')" height="160" width="160")
+                v-col.text-center(cols="12")
+                  strong(style="font-size:1.6rem;") Apply
+                v-col.text-center(cols="12")
+                  div.px-8(style="font-size:1rem; color:#777;") You can choose to either apply through platforms outside or directly with the company directly.
+          v-col(cols="12" md="4")
+            .wrapper
+              v-row
+                v-col(cols="12")
+                  v-img.mt-10.mx-auto(:src="require('./assets/plan.svg')" height="160" width="160")
+                v-col.text-center(cols="12")
+                  strong(style="font-size:1.6rem;") Manage
+                v-col.text-center(cols="12")
+                  div.px-8(style="font-size:1rem; color:#777;") Mange your many applications with easy to use interface and flexible way of storing information.
+      
+        v-row.mt-4.justify-center
+          v-col(cols="12").text-center
+            v-btn(color="#E82735" dark x-large) Sign up now to be the first to experience!
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+        v-row.justify-center.mt-10
+          v-col(cols="12")
+            div Icons made by 
+              a(href="https://www.flaticon.com/authors/freepik" title="Freepik") Freepik 
+              | from 
+              a(href="https://www.flaticon.com/" title="Flaticon") www.flaticon.com
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld,
-  },
 
   data: () => ({
     //
   }),
 };
 </script>
+
+<style>
+.v-sheet {
+  background: url('~@/assets/pattern.svg') #f8f8f8;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-align: center; */
+  color: #3c3b37;
+  /* overflow-x: hidden; */
+}
+
+.wrapper:hover {
+  box-shadow: 0 2px 40px #e0e5f0;
+  transform: translateY(-3px);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.wrapper {
+  transition: all .3s cubic-bezier(.77,0,.175,1);
+  border: 1px solid #d9e1e6;
+  background-color: #fff;
+}
+</style>
