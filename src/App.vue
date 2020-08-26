@@ -6,7 +6,7 @@
       absolute
     )
       a
-        v-img#logo(:src="require('@/assets/Logo.png')" height="36" max-width="250" contain)
+        v-img(:src="require('@/assets/Logo_black.png')" height="36" max-width="250" contain)
 
       v-spacer
 
