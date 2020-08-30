@@ -60,7 +60,7 @@
         v-row.mt-4.justify-center
           v-col(cols="8" style="display:flex;").text-center
             v-text-field.mr-4(hide-details label="email" v-model='email' outlined color="#E82735" style="width:50% !important; background-color:#fff;")
-            v-btn(color="#E82735" dark x-large) Early Access
+            v-btn(color="#1C5DAB" dark x-large) Early Access
 
         v-row.justify-center.mt-10
           v-col(cols="12")
